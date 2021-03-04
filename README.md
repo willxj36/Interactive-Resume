@@ -1,3 +1,5 @@
+# Interactive App to explore the resume/qualifications of Will Seese
+
 # Barebones React/TypeScript/Express/Sass Boilerplate
 This project is a starting point for a TypeScript based React app that also has a local API server using express.
 
