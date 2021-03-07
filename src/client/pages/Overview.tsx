@@ -1,14 +1,18 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
+import { Switch, Route, Link, useRouteMatch, useLocation } from 'react-router-dom';
 import { Job } from '../../utils/models';
 
-import JobSummary from '../components/JobSummary';
-import Skills from '../components/Skills';
-import Education from '../components/Education';
+import Skills from './Skills';
+import Education from './Education';
+import WorkExperience from './WorkExperience';
 
 const Overview = () => {
 
     const [jobs, setJobs] = useState<Job[]>([]);
+
+    const location = useLocation();
+    const { path, url } = useRouteMatch();
 
     useEffect(() => {
         (async () => {
@@ -19,17 +23,23 @@ const Overview = () => {
     }, [])
 
     return(
-        <div className="mt-5 pt-3 container">
+        <div className="mt-5 pt-3 position-relative container">
             <div className="row">
-                <div className="col-lg-9">
-                    <p className="display-4">Work Experience</p>
-                    {jobs.map(job => (
-                        <JobSummary key={job.id} job={job} />
-                    ))}
-                </div>
+                <main className="col-lg-9">
+                    <Switch>
+                        <Route exact path={path}>
+                            <WorkExperience jobs={jobs} />
+                        </Route>
+                        <Route path={`${path}/education`} component={Education} />
+                        <Route path={`${path}/skills`} component={Skills} />
+                    </Switch>
+                </main>
                 <div className="col-lg-3">
-                    <Education />
-                    <Skills />
+                    <nav className="position-fixed col-2">
+                        <Link to={url} className={`my-4 btn btn-lg btn-${location.pathname === '/overview' ? 'success' : 'outline-secondary'} d-block`}>Work Experience</Link>
+                        <Link to={`${url}/education`} className={`my-4 btn btn-lg btn-${location.pathname === '/overview/education' ? 'success' : 'outline-secondary'} d-block`}>Education</Link>
+                        <Link to={`${url}/skills`} className={`my-4 btn btn-lg btn-${location.pathname === '/overview/skills' ? 'success' : 'outline-secondary'} d-block`}>Skills</Link>
+                    </nav>
                 </div>
             </div>
         </div>

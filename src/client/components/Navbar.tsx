@@ -19,13 +19,13 @@ const Navbar = () => {
                         <div className="d-flex mr-n3 justify-content-end">
                             <ul className="list-group position-absolute col-xl-2 col-md-4 col-sm-6">
                                 <Link to='/overview' onClick={() => setJumpMenu(false)}>
-                                    <li className="list-group-item text-right">Overview</li>
+                                    <li className="list-group-item text-right">Work Experience</li>
                                 </Link>
-                                <Link to='/education' onClick={() => setJumpMenu(false)}>
+                                <Link to='/overview/education' onClick={() => setJumpMenu(false)}>
                                     <li className="list-group-item text-right">Education</li>
                                 </Link>
-                                <Link to='/experience' onClick={() => setJumpMenu(false)}>
-                                    <li className="list-group-item text-right">Experience</li>
+                                <Link to='/overview/skills' onClick={() => setJumpMenu(false)}>
+                                    <li className="list-group-item text-right">Skills</li>
                                 </Link>
                             </ul>
                         </div>

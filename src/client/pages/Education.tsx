@@ -3,9 +3,11 @@ import * as React from 'react';
 const Education = () => {
 
     return(
-        <div className="mt-5 pt-3">
-            <p>Education</p>
-        </div>
+        <>
+            <p className="display-4">Education</p>
+            <h5>Colorado State University</h5>
+            <h5>Covalence Coding Bootcamp</h5>
+        </>
     )
 }
 
