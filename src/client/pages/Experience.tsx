@@ -4,18 +4,18 @@ import { Job } from '../../utils/models';
 
 import JobSummary from '../components/JobSummary';
 
-interface IWorkExperienceProps {
+interface IExperienceProps {
     jobs: Job[]
 }
 
-const WorkExperience: React.FC<IWorkExperienceProps> = ({ jobs }) => {
+const Experience: React.FC<IExperienceProps> = ({ jobs }) => {
 
     const [expandAll, setExpandAll] = useState<boolean>(false);
 
     return (
         <>
             <div className="row align-items-center">
-                <p className="display-4">Work Experience</p>
+                <p className="display-4">Experience</p>
                 <button onClick={() => setExpandAll(!expandAll)} className="btn btn-outline-info ml-5">{!expandAll ? 'Show All Details' : 'Hide All Details'}</button>
             </div>
             <div className="mx-n3">
@@ -28,4 +28,4 @@ const WorkExperience: React.FC<IWorkExperienceProps> = ({ jobs }) => {
 
 }
 
-export default WorkExperience;
+export default Experience;

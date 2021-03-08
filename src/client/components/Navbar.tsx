@@ -19,7 +19,7 @@ const Navbar = () => {
                         <div className="d-flex mr-n3 justify-content-end">
                             <ul className="list-group position-absolute col-xl-2 col-md-4 col-sm-6">
                                 <Link to='/overview' onClick={() => setJumpMenu(false)}>
-                                    <li className="list-group-item text-right">Work Experience</li>
+                                    <li className="list-group-item text-right">Experience</li>
                                 </Link>
                                 <Link to='/overview/education' onClick={() => setJumpMenu(false)}>
                                     <li className="list-group-item text-right">Education</li>
@@ -27,6 +27,9 @@ const Navbar = () => {
                                 <Link to='/overview/skills' onClick={() => setJumpMenu(false)}>
                                     <li className="list-group-item text-right">Skills</li>
                                 </Link>
+                                <a href="#">
+                                    <li className="list-group-item text-right">Portfolio (Coming Soon)</li>
+                                </a>
                             </ul>
                         </div>
                     ) : null }

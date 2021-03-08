@@ -5,8 +5,12 @@ const Education = () => {
     return(
         <>
             <p className="display-4">Education</p>
-            <h5>Colorado State University</h5>
-            <h5>Covalence Coding Bootcamp</h5>
+            <div>
+                <h5>Colorado State University</h5>
+            </div>
+            <div>
+                <h5>Covalence Coding Bootcamp</h5>
+            </div>
         </>
     )
 }

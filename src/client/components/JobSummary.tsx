@@ -21,7 +21,7 @@ const JobSummary: React.FC<IJobSummaryProps> = ({ job, expand }) => {
     let endDate = job.endDate ? dayjs(job.endDate).format('MMM YYYY') : 'present';
 
     return(
-        <div className="card my-2">
+        <div className="card border-success my-2">
             <div className="card-header">
                 <h3 className="card-title">{job.company}</h3>
                 <h4 className="card-subtitle">{job.title}</h4>
@@ -36,7 +36,7 @@ const JobSummary: React.FC<IJobSummaryProps> = ({ job, expand }) => {
             </div>
             ) : null}
             <div className="card-footer">
-                <button onClick={() => setShowDetails(!showDetails)} className="btn btn-outline-primary">{!showDetails ? 'See Details' : 'Minimize Details'}</button>
+                <button onClick={() => setShowDetails(!showDetails)} className="btn btn-outline-primary">{!showDetails ? 'Show Details' : 'Hide Details'}</button>
             </div>
         </div>
     )

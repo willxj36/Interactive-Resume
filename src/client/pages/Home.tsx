@@ -11,7 +11,7 @@ const Home = () => {
             <p className="display-4 my-4">willxj36@gmail.com</p>
             <p className="display-4 my-4">(719)659-9062</p>
             <Link to='/overview' className="btn btn-primary my-4 p-3" style={{fontSize: 40}}>{'R\u00E9sum\u00E9'}</Link>
-            <a href="#" className="btn btn-secondary my-4 p-3" style={{fontSize: 30}}>Portfolio</a>
+            <a href="#" className="btn btn-secondary my-4 p-3" style={{fontSize: 30}}>Portfolio (Link Coming Soon!)</a>
         </div>
     )
 }
