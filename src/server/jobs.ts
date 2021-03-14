@@ -8,7 +8,7 @@ export const jobs: Job[] = [
         title: 'Freelance Web Designer',
         startDate: new Date(2021, 2, 1),
         endDate: null,
-        summary: 'Developing fullstack website for Orifin, LLC, a new small business opening an innovative technology facility; will add link when site goes live',
+        summary: 'Developing fullstack website for Orifin, LLC, a new small business opening an innovative technology facility; see Portfolio for links',
         responsibilities: ['Solo development of website including server functions and DB administration', 'Will include various requirements for authentication/security, memberships and other e-commerce', 'Site will be for a business that is projected to make ~$1 million/year first year after initial startup']
     },
     {

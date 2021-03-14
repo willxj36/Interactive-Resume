@@ -1,19 +1,22 @@
 import * as React from 'react';
-import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import Overview from './pages/Overview';
+import Resume from './pages/Resume';
+import Portfolio from './pages/Portfolio';
+import AboutMe from './pages/AboutMe';
 
-const App = (props: AppProps) => {
+const App = () => {
 
 	return (
 		<BrowserRouter>
 			<Navbar />
 			<Switch>
 				<Route exact path='/' component={Home} />
-				<Route path='/overview' component={Overview} />
+				<Route path='/resume' component={Resume} />
+				<Route path='/portfolio' component={Portfolio} />
+				<Route path='/aboutme' component={AboutMe} />
 			</Switch>
 		</BrowserRouter>
 	);

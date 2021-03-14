@@ -8,7 +8,7 @@ const Skills = () => {
     return (
         <>
             <p className="display-4">Skills</p>
-            <div className="card border-success">
+            <div className="card border-info">
                 <div className="card-header">
                     <h1>Languages</h1>
                 </div>

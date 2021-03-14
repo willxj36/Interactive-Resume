@@ -8,3 +8,12 @@ export interface Job {
     summary: string,
     responsibilities: string[]
 }
+
+export interface Project {
+    id: number,
+    name: string,
+    infoList: string[],
+    techList: string[],
+    gitHubLink: string,
+    siteLink: string,
+}

@@ -24,8 +24,9 @@ const Overview = () => {
 
     return(
         <div>
-            <img src="/resume-bg.jpg" alt="" style={{opacity: 0.1, zIndex: -1}} className="position-fixed min-vh-100 min-vw-100" />
-            <div className="mt-5 pt-3 position-relative container">
+            <img src="/img/resume-bg.jpg" alt="" style={{opacity: 0.1, zIndex: -1}} className="position-fixed min-vh-100 min-vw-100" />
+            <div style={{height: 50}}></div>
+            <div className="pt-3 position-relative container">
                 <div className="row">
                     <main className="col-lg-9">
                         <Switch>
@@ -38,9 +39,9 @@ const Overview = () => {
                     </main>
                     <div className="col-lg-3">
                         <nav className="position-fixed col-2">
-                            <Link to={url} className={`my-4 btn btn-lg btn-${location.pathname === '/overview' ? 'success' : 'outline-secondary'} d-block`}>Experience</Link>
-                            <Link to={`${url}/education`} className={`my-4 btn btn-lg btn-${location.pathname === '/overview/education' ? 'success' : 'outline-secondary'} d-block`}>Education</Link>
-                            <Link to={`${url}/skills`} className={`my-4 btn btn-lg btn-${location.pathname === '/overview/skills' ? 'success' : 'outline-secondary'} d-block`}>Skills</Link>
+                            <Link to={url} className={`my-4 btn btn-lg btn-${location.pathname === '/resume' ? 'success border border-dark' : 'outline-secondary'} d-block`}>Experience</Link>
+                            <Link to={`${url}/education`} className={`my-4 btn btn-lg btn-${location.pathname === '/resume/education' ? 'success border border-dark' : 'outline-secondary'} d-block`}>Education</Link>
+                            <Link to={`${url}/skills`} className={`my-4 btn btn-lg btn-${location.pathname === '/resume/skills' ? 'success border border-dark' : 'outline-secondary'} d-block`}>Skills</Link>
                         </nav>
                     </div>
                 </div>

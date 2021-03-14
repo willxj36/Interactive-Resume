@@ -8,28 +8,28 @@ const Navbar = () => {
 
     return(
         <>
-            <nav className="navbar bg-primary fixed-top">
-                <Link to='/'>
-                    <button onClick={() => setJumpMenu(false)} className="btn btn-dark">Home</button>
-                </Link>
-                <h3 className="mx-auto text-white navbar-brand">Will Seese Resume</h3>
+            <nav className="navbar fixed-top" style={{background: 'linear-gradient(#004488, transparent)'}}>
+                <Link to='/' onClick={() => setJumpMenu(false)} className="btn btn-darkinfo navbar-brand">Will Seese</Link>
                 <div>
                     <button onClick={() => setJumpMenu(!jumpMenu)} className="btn btn-dark dropdown-toggle">Jump to  </button>
                     {jumpMenu ? (
                         <div className="d-flex mr-n3 justify-content-end">
                             <ul className="list-group position-absolute col-xl-2 col-md-4 col-sm-6">
-                                <Link to='/overview' onClick={() => setJumpMenu(false)}>
+                                <Link to='/portfolio' onClick={() => setJumpMenu(false)}>
+                                    <li className="list-group-item text-right">Portfolio</li>
+                                </Link>
+                                <Link to='/resume' onClick={() => setJumpMenu(false)}>
                                     <li className="list-group-item text-right">Experience</li>
                                 </Link>
-                                <Link to='/overview/education' onClick={() => setJumpMenu(false)}>
+                                <Link to='/resume/education' onClick={() => setJumpMenu(false)}>
                                     <li className="list-group-item text-right">Education</li>
                                 </Link>
-                                <Link to='/overview/skills' onClick={() => setJumpMenu(false)}>
+                                <Link to='/resume/skills' onClick={() => setJumpMenu(false)}>
                                     <li className="list-group-item text-right">Skills</li>
                                 </Link>
-                                <a href="#">
-                                    <li className="list-group-item text-right">Portfolio (Coming Soon)</li>
-                                </a>
+                                <Link to='/aboutme' onClick={() => setJumpMenu(false)}>
+                                    <li className="list-group-item text-right">About Me</li>
+                                </Link>
                             </ul>
                         </div>
                     ) : null }

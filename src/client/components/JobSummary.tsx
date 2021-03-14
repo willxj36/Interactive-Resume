@@ -21,7 +21,7 @@ const JobSummary: React.FC<IJobSummaryProps> = ({ job, expand }) => {
     let endDate = job.endDate ? dayjs(job.endDate).format('MMM YYYY') : 'present';
 
     return(
-        <div className="card border-success my-2">
+        <div className="card border-info my-2">
             <div className="card-header">
                 <h3 className="card-title">{job.company}</h3>
                 <h4 className="card-subtitle">{job.title}</h4>
