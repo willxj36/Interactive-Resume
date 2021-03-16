@@ -7,7 +7,7 @@ import Skills from './Skills';
 import Education from './Education';
 import Experience from './Experience';
 
-const Overview = () => {
+const Resume = () => {
 
     const [jobs, setJobs] = useState<Job[]>([]);
 
@@ -25,7 +25,7 @@ const Overview = () => {
     return(
         <div>
             <img src="/img/resume-bg.jpg" alt="" style={{opacity: 0.1, zIndex: -1}} className="position-fixed min-vh-100 min-vw-100" />
-            <div style={{height: 50}}></div>
+            <div style={{height: 50}} />
             <div className="pt-3 position-relative container">
                 <div className="row">
                     <main className="col-lg-9">
@@ -51,4 +51,4 @@ const Overview = () => {
 
 }
 
-export default Overview;
+export default Resume;

@@ -16,7 +16,7 @@ const Experience: React.FC<IExperienceProps> = ({ jobs }) => {
         <>
             <div className="row align-items-center">
                 <p className="display-4">Experience</p>
-                <button onClick={() => setExpandAll(!expandAll)} className="btn btn-outline-info ml-5">{!expandAll ? 'Show All Details' : 'Hide All Details'}</button>
+                <button onClick={() => setExpandAll(!expandAll)} className="btn btn-outline-darkinfo ml-5">{!expandAll ? 'Show All Details' : 'Hide All Details'}</button>
             </div>
             <div className="mx-n3">
                 {jobs.map(job => (
