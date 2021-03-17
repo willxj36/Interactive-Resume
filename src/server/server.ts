@@ -1,9 +1,11 @@
 import * as express from 'express';
 import router from './routes';
 import * as path from 'path'
+import * as helmet from 'helmet';
 
 const app = express();
 
+app.use(helmet());
 app.use(express.static('public'));
 app.use(express.json());
 app.use(router);

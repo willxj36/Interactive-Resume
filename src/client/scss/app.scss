@@ -3,4 +3,6 @@ $theme-colors: (
     'darkinfo': #004488
 );
 
+$enable-responsive-font-sizes: true;
+
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';

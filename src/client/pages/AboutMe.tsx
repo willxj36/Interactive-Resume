@@ -20,9 +20,8 @@ const AboutMe = () => {
                             </li>
                             <li className="py-4 list-group-item" style={{backgroundColor: 'rgba(255, 255, 255, 0)'}}>
                                 Perhaps most importantly, I've found I have a passion for learning new things. This is one of the biggest reasons I have gravitated towards development
-                                as a career where I can grow my knowledge and skills while keeping up with an ever-changing industry (I intend to learn NextJS and Tailwind in the 
-                                coming weeks/months!). I also was drawn to development because I have had many hobbies and interests related to computers and technology throughout my
-                                life including dabbling in HTML as early as middle school.
+                                as a career where I can grow my knowledge and skills while keeping up with an ever-changing industry. I also was drawn to development because I have 
+                                had many hobbies and interests related to computers and technology throughout my life including dabbling in HTML as early as middle school.
                             </li>
                             <li className="pt-4 list-group-item" style={{backgroundColor: 'rgba(255, 255, 255, 0)'}}>
                                 I'm an avid lifelong golfer and play competitively in amateur and open-style tournaments. I'm a DIYer who enjoys giving everything a shot. 
