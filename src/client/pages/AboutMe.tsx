@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const AboutMe = () => {
 
@@ -30,7 +30,8 @@ const AboutMe = () => {
                         </ul>
                     </div>
                     <div className="card-footer">
-                        <a href="https://github.com/willxj36"><FontAwesomeIcon icon={faGithub} size='4x' /></a>
+                        <a href="https://github.com/willxj36"><FontAwesomeIcon icon={faGithub} size='3x' /></a>
+                        <a href="https://www.linkedin.com/in/william-seese-89aa07209/" className="ml-3"><FontAwesomeIcon icon={faLinkedin} size='3x' /></a>
                     </div>
                 </div>
             </div>
