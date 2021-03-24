@@ -23,6 +23,6 @@ export const projects: Project[] = [
             "3rd-party API integration of Mailgun and payment platform TBD according to owners' needs"],
         techList: ['Javascript', 'Typescript', 'React', 'MySQL', 'CSS', 'Bootstrap', 'NodeJS', 'Mailgun'],
         gitHubLink: 'https://github.com/willxj36/Orifin-Prototype',
-        siteLink: undefined,
+        siteLink: 'http://orifin-prototype.herokuapp.com',
     }
 ]

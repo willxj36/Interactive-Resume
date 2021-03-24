@@ -27,6 +27,7 @@ const Education = () => {
                 {showCov ? (
                     <div className="card-body">
                         <ul>
+                            <li>Successfully completed 12 week course in 6 weeks; highly motivated self-starter</li>
                             <li>Focus on JavaScript/TypeScript and numerous frameworks for full-stack development</li>
                                 <ul>
                                     <li>Raw HTML and CSS</li>
