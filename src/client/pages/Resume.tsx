@@ -38,7 +38,7 @@ const Resume = () => {
                         </Switch>
                     </main>
                     <div className="col-lg-3">
-                        <nav className="position-fixed col-2">
+                        <nav>
                             <Link to={url} className={`my-4 btn btn-lg btn-${location.pathname === '/resume' ? 'success border border-dark' : 'outline-secondary'} d-block`}>Experience</Link>
                             <Link to={`${url}/education`} className={`my-4 btn btn-lg btn-${location.pathname === '/resume/education' ? 'success border border-dark' : 'outline-secondary'} d-block`}>Education</Link>
                             <Link to={`${url}/skills`} className={`my-4 btn btn-lg btn-${location.pathname === '/resume/skills' ? 'success border border-dark' : 'outline-secondary'} d-block`}>Skills</Link>
