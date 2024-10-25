@@ -1,7 +1,8 @@
 {
-  "name": "barebones-react-typescript-express",
-  "version": "1.0.0",
+  "name": "wills-interactive-resume",
+  "version": "1.0.1",
   "description": "",
+  "engines": { "node": "14.x"},
   "main": "dist/server.js",
   "scripts": {
     "build": "npx webpack",
