@@ -2,7 +2,9 @@
   "name": "wills-interactive-resume",
   "version": "1.0.1",
   "description": "",
-  "engines": { "node": "14.x"},
+  "engines": {
+    "node": "14.x"
+  },
   "main": "dist/server.js",
   "scripts": {
     "build": "npx webpack",
@@ -38,7 +40,7 @@
     "sass-loader": "^7.3.1",
     "style-loader": "^0.23.1",
     "ts-loader": "^5.4.5",
-    "typescript": "^3.9.2",
+    "typescript": "^5.6.3",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.10",
     "webpack-node-externals": "^1.7.2"
