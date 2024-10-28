@@ -1,12 +1,27 @@
+import dayjs from 'dayjs';
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Job } from '../../utils/models';
-import * as dayjs from 'dayjs';
 
-interface IJobSummaryProps {
-    job: Job,
-    expand: boolean
+import { IExperienceProps, IJobSummaryProps } from './Experience.models';
+
+export const Experience: React.FC<IExperienceProps> = ({ jobs }) => {
+
+    const [expandAll, setExpandAll] = useState<boolean>(false);
+
+    return (
+        <>
+            <div className="row align-items-center">
+                <p className="display-4">Experience</p>
+                <button onClick={() => setExpandAll(!expandAll)} className="btn btn-outline-darkinfo ml-5">{!expandAll ? 'Show All Details' : 'Hide All Details'}</button>
+            </div>
+            <div className="mx-n3">
+                {jobs.map(job => (
+                    <JobSummary key={job.id} job={job} expand={expandAll} />
+                ))}
+            </div>
+        </>
+    )
+
 }
 
 const JobSummary: React.FC<IJobSummaryProps> = ({ job, expand }) => {
@@ -42,5 +57,3 @@ const JobSummary: React.FC<IJobSummaryProps> = ({ job, expand }) => {
     )
 
 }
-
-export default JobSummary;

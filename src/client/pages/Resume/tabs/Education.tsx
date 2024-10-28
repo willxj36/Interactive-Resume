@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
 
-const Education = () => {
+export const Education = () => {
 
     const [showCsu, setShowCsu] = useState<boolean>(false);
     const [showCov, setShowCov] = useState<boolean>(false);
@@ -83,5 +83,3 @@ const Education = () => {
         </>
     )
 }
-
-export default Education;

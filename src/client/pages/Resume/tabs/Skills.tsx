@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
 
-const Skills = () => {
+export const Skills = () => {
 
     const [showLang, setShowLang] = useState<boolean>(false);
     const [showOther, setShowOther] = useState<boolean>(false);
@@ -87,5 +87,3 @@ const Skills = () => {
         </>
     )
 }
-
-export default Skills;

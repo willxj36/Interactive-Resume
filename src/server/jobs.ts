@@ -7,7 +7,7 @@ export const jobs: Job[] = [
         location: 'Colorado Springs, CO',
         title: 'Freelance Web Designer',
         startDate: new Date(2021, 2, 1),
-        endDate: null,
+        endDate: new Date(2021, 5, 1),
         summary: 'Developing fullstack website for Orifin, LLC, a new small business opening an innovative technology facility; see Portfolio for links',
         responsibilities: ['Solo development of website including server functions and DB administration', 'Will include various requirements for authentication/security, memberships and other e-commerce', 'Site will be for a business that is projected to make ~$1 million/year first year after initial startup']
     },
@@ -17,7 +17,7 @@ export const jobs: Job[] = [
         location: 'Commerce City, CO',
         title: 'CDL Delivery Driver',
         startDate: new Date(2015, 4, 18),
-        endDate: null,
+        endDate: new Date(2021, 4, 13),
         summary: 'Local commercial driver delivering up to 35,000 lb of bulk groceries and supplies to restaurants, schools, hospitals, etc',
         responsibilities: ['Safe and secure transportation of $300,000+ of equipment and goods daily', 'Autonomy to make virtually all decisions when/if circumstances changed suddenly', 'Ensuring compliance with FMCSA regulations regarding cargo, hours, equipment safety, etc', 'Focus on customer satisfaction within the frame of company needs and other considerations (safety, etc)', 'Keep to a constantly changing schedule while handling constantly changing conditions and circumstances']
     },
