@@ -1,0 +1,26 @@
+.summary {
+  &__container {
+    display: flex;
+    width: 50vw;
+    max-width: 850px;
+    justify-content: space-between;
+  }
+
+  &__header {
+    font-size: 2.5rem;
+  }
+
+  &__personal {
+    max-width: 30vw;
+    min-width: 300px;
+    font-size: 1.2rem;
+  }
+
+  &__link-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    margin-top: 36px;
+    align-items: end;
+  }
+}

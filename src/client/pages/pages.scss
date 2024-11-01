@@ -1,0 +1,25 @@
+.background {
+  background-color: #fffd;
+  background-blend-mode: lighten;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+
+  &__home,
+  &__resume {
+    background-image: url("/public/img/resume-bg.jpg");
+  }
+
+  &__portfolio {
+    background-image: url("/public/img/portfolio-bg.png");
+  }
+
+  &__home {
+    align-items: center;
+  }
+}

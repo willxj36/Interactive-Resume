@@ -1,0 +1,24 @@
+.resume {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 50vw;
+    min-width: 300px;
+    margin-top: 125px;
+  }
+
+  &__current-section {
+    flex-grow: 1;
+  }
+
+  &__nav {
+    position: sticky;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 36px;
+    margin-top: 24px;
+  }
+}

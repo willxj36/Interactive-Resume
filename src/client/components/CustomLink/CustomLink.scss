@@ -1,0 +1,51 @@
+.link {
+  $l: &;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &__hover {
+    & #{$l}__underline {
+      background-color: #004488;
+      width: 90%;
+    }
+    & #{$l}__text {
+      color: #004488;
+    }
+  }
+
+  &__disabled {
+    pointer-events: none;
+    & #{$l}__underline {
+      width: 90%;
+    }
+  }
+
+  &__text-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__text {
+    color: black;
+    transition: color 0.5s;
+    font-size: 1.5rem;
+  }
+
+  &__underline {
+    height: 3px;
+    width: 0px;
+    border: none;
+    border-radius: 1.5px;
+    background-color: black;
+    transition: width 0.5s, background-color 0.5s;
+  }
+
+  &__bullet {
+    width: 4px;
+    height: 4px;
+    background-color: #004488;
+  }
+}

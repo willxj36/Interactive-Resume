@@ -1,0 +1,45 @@
+.resume-card {
+  &__container {
+    background: linear-gradient(120deg, #fffb, 70%, #00448866);
+    border: transparent;
+    border-radius: 4px;
+    padding: 0px 12px;
+    box-shadow: 4px 4px 4px #00448866;
+    transition: height 0.5s;
+    overflow: hidden;
+  }
+
+  &__title-container {
+    margin-bottom: 16px;
+  }
+
+  &__title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__subtitle {
+    margin: 0;
+  }
+
+  &__expand-icon {
+    color: #004488cc;
+    transition: transform 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      color: black;
+    }
+
+    &--expanded {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    color: black;
+  }
+}

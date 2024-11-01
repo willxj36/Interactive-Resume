@@ -1,17 +1,32 @@
-import * as express from 'express';
-import { jobs } from './jobs';
-import { projects } from './projects'
+import * as express from "express";
+
+import { JOBS, PROJECTS, SCHOOLS, SKILLS } from "./data";
 
 const router = express.Router();
 
-router.get('/api/jobs', (req, res) => {         //Jobs are stored in a file instead of a DB to simplify code and speed up load times.
-    let jobInfo = jobs;                         //To see code examples connected to DB, check out some of the projects in my portfolio! (Also part of this site!)
-    res.status(200).json(jobInfo);
+/**
+ * entities here are stored in local files for simplicity, cost, and speed but accessed through
+ * this "server" for demo/practice reasons
+ */
+
+router.get("/api/jobs", (_req, res) => {
+  const jobInfo = JOBS;
+  res.status(200).json(jobInfo);
 });
 
-router.get('/api/projects', (req, res) => {
-    let projectInfo = projects.sort((a, b) => b.id - a.id);
-    res.status(200).json(projectInfo);
+router.get("/api/projects", (_req, res) => {
+  const projectInfo = PROJECTS.sort((a, b) => b.id - a.id);
+  res.status(200).json(projectInfo);
+});
+
+router.get("/api/schools", (_req, res) => {
+  const schoolInfo = SCHOOLS;
+  res.status(200).json(schoolInfo);
+});
+
+router.get("/api/skills", (_req, res) => {
+  const skillInfo = SKILLS;
+  res.status(200).json(skillInfo);
 });
 
 export default router;

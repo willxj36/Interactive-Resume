@@ -1,0 +1,29 @@
+.resume-tab {
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10%;
+  }
+
+  &__expand-all-button {
+    color: #004488cc;
+  }
+
+  &__expand-all-icon {
+    transition: transform 0.5s;
+
+    &--expanded {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__jobs-container {
+    margin-right: 10%;
+    margin-bottom: 16px;
+  }
+}
+
+.ant-btn {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}

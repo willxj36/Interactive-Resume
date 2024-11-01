@@ -1,34 +1,39 @@
-import { Modal } from 'antd';
-import * as React from 'react';
-import { Link } from 'react-router-dom';
+import { Modal } from "antd";
+import * as React from "react";
+import { Link } from "react-router-dom";
+
+import { CustomLink } from "../../components/CustomLink";
 
 import "../../scss/app.scss";
 import "./Home.scss";
 
 export const Home = () => {
-    const [progressModalOpen, setProgressModalOpen] = React.useState<boolean>(true);
-
-    return (
-        <>
-            <Modal
-                open={progressModalOpen}
-                onOk={() => setProgressModalOpen(false)}
-                cancelButtonProps={{ style: { display: "none" } }}
-                okText="Take a look"
-                closable={false}
-                maskClosable={false}
-                title="Please excuse my progress..."
-            >
-                <p>I've come a long way in 4 years but my website hasn't...yet. Please check back soon for a new site, but in the meantime feel free to see what I made as a fresh bootcamp grad!</p>
-            </Modal>
-            <div className="min-vh-100 d-flex flex-column justify-content-center align-items-start">
-                <img src="/img/resume-bg.jpg" alt="" style={{opacity: 0.1, zIndex: -1}} className="page-background" />
-                <h1 className="display-2 ml-5">William A. Seese</h1>
-                <a href="mailto:willxj36@gmail.com" className="display-4 my-4 ml-5 text-darkinfo">willxj36@gmail.com</a>
-                <Link to='/portfolio' className="btn btn-outline-darkinfo border-0 mt-4 mb-2 py-2 px-4 ml-5" style={{fontSize: 40}}>Portfolio</Link>
-                <Link to='/resume' className="btn btn-outline-dark border-0 my-2 py-2 px-4 ml-5" style={{fontSize: 30}}>{'R\u00E9sum\u00E9'}</Link>
-                <Link to='/aboutme' className="btn btn-outline-dark border-0 my-2 py-2 px-4 ml-5" style={{fontSize: 30}}>About Me</Link>
-            </div>
-        </>
-    );
+  return (
+    <div className="background background__home">
+      <div className="summary__container">
+        <div className="summary__personal">
+          <h1 className="summary__header">William A. Seese</h1>
+          <h4>...but you can call me Will</h4>
+          <p>
+            Hello! I'm a software engineer with experience building and improving large and complex web-based SaaS
+            applications, but always seeking opportunities to grow my knowledge and branch out! I have a great interest
+            in moving to more backend heavy roles and am currently working on leveling up my knowledge of Java. Click
+            around to learn more or if you've seen enough, <Link to="/">let's chat!</Link>
+          </p>
+          {/* TODO: add link to contact info over "let's chat" */}
+        </div>
+        <div className="summary__link-container">
+          <CustomLink bullet to="/portfolio">
+            Portfolio
+          </CustomLink>
+          <CustomLink bullet to="/resume">
+            {"R\u00E9sum\u00E9"}
+          </CustomLink>
+          <CustomLink bullet to="/aboutme">
+            About Me
+          </CustomLink>
+        </div>
+      </div>
+    </div>
+  );
 };

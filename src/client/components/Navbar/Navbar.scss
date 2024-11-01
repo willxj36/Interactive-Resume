@@ -1,75 +1,92 @@
 @keyframes navbar-slide-up {
-	0% {
-		transform: translateY(0px);
-	}
-	100% {
-		transform: translateY(-20px);
-	}
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
 }
 
 @keyframes navbar-slide-down {
-	0% {
-		transform: translateY(-20px);
-	}
-	100% {
-		transform: translateY(0px);
-	}
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .navbar {
-	width: 100%;
-	position: sticky;
-	top: 20px;
+  $n: &;
+  width: 100%;
+  position: sticky;
+  top: 20px;
 
-	&__contents {
-		width: 90%;
-		height: 75px;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		margin: -75px auto;
-	}
+  &__contents {
+    width: 90%;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: -75px auto;
+  }
 
-	&__endcap {
-		padding: 0 20px;
-		margin: auto 0;
-	}
+  &__endcap {
+    padding: 0 20px;
+    margin: auto 0;
+  }
 
-	&__background {
-		height: 75px;
-		width: 90%;
-		border: none;
-		border-radius: 10px;
-		background: linear-gradient(#004488, transparent);
-		margin: 0px auto;
-		transition: width 1s, border-radius 2s;
-	}
+  &__icon-shader {
+    width: 32px;
+    height: 32px;
+    background: #0c0341;
+    position: absolute;
+    border: none;
+    border-radius: 3px;
+    opacity: 0;
+    transition: opacity 1s;
 
-	&__scrolled-down {
-		animation: navbar-slide-up 1s ease 0s 1 forwards;
+    &:hover {
+      opacity: 0.3;
+    }
+  }
 
-		> .navbar__background {
-			width: 100%;
-			border-radius: 0px;
-		}
-	}
+  &__background {
+    height: 75px;
+    width: 90%;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(#004488, transparent);
+    margin: 0px auto;
+    transition: width 1s, border-radius 2s;
+  }
 
-	&__scrolled-up {
-		animation: navbar-slide-down 1s ease 0s 1 forwards;
-	}
+  &__scrolled-down {
+    animation: navbar-slide-up 1s ease 0s 1 forwards;
 
-	&__contact-button {
-		height: 48px;
-		width: 200px;
-		font-size: large;
-		border: none;
-		border-radius: 16px;
-		background: linear-gradient(transparent, #004488);
-		color: whitesmoke;
-		transition: background-color 0.4s linear;
+    > #{$n}__background {
+      width: 100%;
+      border-radius: 0px;
+    }
+  }
 
-		&:hover {
-			background-color: #0C0341;
-		}
-	}
+  &__scrolled-up {
+    animation: navbar-slide-down 1s ease 0s 1 forwards;
+  }
+
+  &__contact-button {
+    cursor: pointer;
+    height: 48px;
+    width: 200px;
+    font-size: large;
+    border: none;
+    border-radius: 16px;
+    background: linear-gradient(transparent, #004488);
+    color: whitesmoke;
+    transition: background-color 0.4s linear;
+
+    &:hover {
+      background-color: #0c0341;
+    }
+  }
 }
