@@ -15,7 +15,7 @@ export const PROJECTS: Project[] = [
       "3rd-party API integration (Mailgun, Stripe)",
     ],
     techList: ["JavaScript", "React", "MySQL", "CSS", "Bootstrap", "NodeJS", "Stripe", "Mailgun"],
-    gitHubLink: "/willxj36/Blogs-Final",
+    gitHubLink: "/Blogs-Final",
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ export const PROJECTS: Project[] = [
       "3rd-party API integration of Mailgun and payment platform according to owners' needs",
     ],
     techList: ["JavaScript", "React", "MySQL", "CSS", "Bootstrap", "NodeJS", "Mailgun"],
-    gitHubLink: "/willxj36/Orifin-Prototype",
+    gitHubLink: "/Orifin-Prototype",
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ export const PROJECTS: Project[] = [
       "Sunset due to future plans to create a different CLI tool with libraries",
     ],
     techList: ["JavaScript", "NodeJS"],
-    gitHubLink: "/willxj36/Time-Clock",
+    gitHubLink: "/Time-Clock",
   },
   {
     id: 4,

@@ -1,10 +1,12 @@
 import React from "react";
-
-import "../pages.scss";
-import "./Contact.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelopeCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
+import { GITHUB_BASE_URL, LINKED_IN_URL } from "../../../utils/constants";
+
+import "../pages.scss";
+import "./Contact.scss";
 
 export const Contact = () => {
   return (
@@ -26,7 +28,7 @@ export const Contact = () => {
               <FontAwesomeIcon icon={faGithub} size="3x" />
             </div>
             <strong>
-              <a className="contact__link" href="https://www.github.com/willxj36" target="_blank" rel="noreferrer">
+              <a className="contact__link" href={GITHUB_BASE_URL} target="_blank" rel="noreferrer">
                 Check out my GitHub
               </a>
             </strong>
@@ -36,7 +38,7 @@ export const Contact = () => {
               <FontAwesomeIcon icon={faLinkedin} size="3x" />
             </div>
             <strong>
-              <a className="contact__link" href="https://www.linkedin.com/in/william-seese-89aa07209/">
+              <a className="contact__link" href={LINKED_IN_URL}>
                 Catch me on LinkedIn
               </a>
             </strong>

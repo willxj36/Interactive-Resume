@@ -10,6 +10,7 @@ import React, { FC, useCallback, useEffect, useLayoutEffect, useRef, useState } 
 
 import { PROJECT_STATUS_TAG_INFO, TECH_ICON_DICTIONARY } from "../Portfolio.utils";
 import { ProjectInfoProps } from "./ProjectInfo.models";
+import { GITHUB_BASE_URL } from "../../../../utils/constants";
 
 import "./ProjectInfo.scss";
 
@@ -126,12 +127,7 @@ export const ProjectInfo: FC<ProjectInfoProps> = (props) => {
         <Divider />
         {project.gitHubLink && (
           <div>
-            <a
-              href={`https://www.github.com/${project.gitHubLink}`}
-              target="_blank"
-              rel="noreferrer"
-              title="GitHub Repo"
-            >
+            <a href={`${GITHUB_BASE_URL}${project.gitHubLink}`} target="_blank" rel="noreferrer" title="GitHub Repo">
               <FontAwesomeIcon icon={faGithub} size="2x" />
             </a>
           </div>
