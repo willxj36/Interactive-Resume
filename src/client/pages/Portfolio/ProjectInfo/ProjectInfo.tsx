@@ -63,8 +63,8 @@ export const ProjectInfo: FC<ProjectInfoProps> = (props) => {
    * opened simultaneously as well
    */
   useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (innerRef.current && !innerRef.current.contains(e.target)) {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (innerRef.current && !innerRef.current.contains(e.target as Node)) {
         setIsExpanded(false);
       }
     };
