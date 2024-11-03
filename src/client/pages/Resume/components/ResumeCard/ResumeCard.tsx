@@ -87,7 +87,7 @@ export const ResumeCard: FC<ResumeCardProps> = (props) => {
         <ul>
           {entity.details.map((res) => (
             // highly arbitrary keys but should guarantee uniqueness for this specific usage
-            <li key={res.description} className="">
+            <li key={res.description}>
               {res.description}
               {res.extraList && (
                 <ul>

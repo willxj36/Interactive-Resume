@@ -1,0 +1,65 @@
+.project-info {
+  &__card {
+    width: 325px;
+    height: 300px;
+    position: relative;
+  }
+
+  &__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 325px;
+    padding: 0 0 12px 12px;
+    background-color: #fff6;
+    border: transparent;
+    border-radius: 5px;
+    outline: 0px solid black;
+    transition: all 1s;
+
+    &--expanded {
+      background-color: #eee;
+      outline: 9999px solid #0008;
+      transform-origin: 0 0;
+      z-index: 1000;
+    }
+  }
+
+  &__header-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__expand-button {
+    padding: 0 0.25rem 0 0; // override antd button's padding
+
+    &-border {
+      border: solid 1px darkgray;
+      width: 1.25rem;
+      border-radius: 30%;
+      height: 1.25rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__tech-list {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__summary {
+    text-align: center;
+    padding-right: 12px;
+  }
+
+  &__status-tag {
+    opacity: 0.75;
+  }
+}
+
+.inner-inner {
+  width: 100%;
+  transition: width 1s;
+}

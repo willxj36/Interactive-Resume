@@ -21,6 +21,7 @@
   width: 100%;
   position: sticky;
   top: 20px;
+  z-index: 2;
 
   &__contents {
     width: 90%;
@@ -78,11 +79,13 @@
     cursor: pointer;
     height: 48px;
     width: 200px;
-    font-size: large;
+    font-size: larger;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     border: none;
     border-radius: 16px;
     background: linear-gradient(transparent, #004488);
-    color: whitesmoke;
+    color: #eee;
+    text-shadow: 2px 3px 4px midnightblue;
     transition: background-color 0.4s linear;
 
     &:hover {

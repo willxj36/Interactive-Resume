@@ -1,0 +1,71 @@
+@mixin banner-background-pseudo($color1, $color2, $stop-position) {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  mask-image: linear-gradient(transparent, 10%, #000, 90%, transparent);
+  z-index: 0;
+  @if not $stop-position {
+    $stop-position: 50%;
+  }
+  background: linear-gradient(30deg, $color1, $stop-position, $color2);
+}
+
+.portfolio {
+  $p: &;
+
+  &__container {
+    height: 100%;
+    width: 100%;
+    min-width: 300px;
+    margin-top: 125px;
+  }
+
+  &__header-container {
+    margin-left: 10%;
+  }
+
+  &__projects-container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+  }
+
+  &__projects-section {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+
+  &__section-header {
+    z-index: 1;
+  }
+
+  &__cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  &__banner {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 48px;
+    margin-bottom: 24px;
+    position: relative;
+
+    &--current:before {
+      @include banner-background-pseudo(#f804, #ff04, null);
+    }
+
+    &--early:before {
+      @include banner-background-pseudo(#88a8, #7418, 25%);
+    }
+
+    &--planned:before {
+      @include banner-background-pseudo(#5ef8, #f088, 75%);
+    }
+  }
+}

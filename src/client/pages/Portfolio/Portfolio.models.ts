@@ -1,6 +1,12 @@
-import { Project } from "../../../utils/models"
-
-export interface IProjectSummaryProps {
-    project: Project,
-    expand: boolean
-}
+export type ProjectTechs =
+  | "JavaScript"
+  | "HTML"
+  | "CSS"
+  | "React"
+  | "MySQL"
+  | "NodeJS"
+  | "Bootstrap"
+  | "Stripe"
+  | "Mailgun"
+  | "Python"
+  | "Java";
