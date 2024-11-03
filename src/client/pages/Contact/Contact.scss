@@ -1,0 +1,43 @@
+.contact {
+  &__container {
+    display: flex;
+    margin: 225px auto 0 auto;
+    width: 50%;
+  }
+
+  &__info-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
+
+  &__info-item {
+    display: flex;
+    margin: 12px 0;
+    text-decoration: none;
+  }
+
+  &__info-icon {
+    width: 80px;
+  }
+
+  &__link {
+    color: #004488;
+    text-decoration: none !important;
+    line-height: 48px;
+    font-size: 20px;
+
+    &:hover {
+      color: black;
+    }
+  }
+
+  &__text-right {
+    text-align: right;
+  }
+
+  &__invite {
+    max-width: 350px;
+    font-size: 20px;
+  }
+}

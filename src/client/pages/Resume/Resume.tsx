@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useParams } from "react-router-dom";
 
-import { CustomLink } from "../../components/CustomLink";
+import { CustomLink } from "../../components";
 import { SectionParam, SECTIONS } from "./Resume.models";
 
 import "../pages.scss";

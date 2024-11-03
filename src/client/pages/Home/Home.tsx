@@ -2,7 +2,7 @@ import { Modal } from "antd";
 import * as React from "react";
 import { Link } from "react-router-dom";
 
-import { CustomLink } from "../../components/CustomLink";
+import { CustomLink } from "../../components";
 
 import "../../scss/app.scss";
 import "./Home.scss";
@@ -18,9 +18,8 @@ export const Home = () => {
             Hello! I'm a software engineer with experience building and improving large and complex web-based SaaS
             applications, but always seeking opportunities to grow my knowledge and branch out! I have a great interest
             in moving to more backend heavy roles and am currently working on leveling up my knowledge of Java. Click
-            around to learn more or if you've seen enough, <Link to="/">let's chat!</Link>
+            around to learn more or if you've seen enough, <Link to="/contact">let's chat!</Link>
           </p>
-          {/* TODO: add link to contact info over "let's chat" */}
         </div>
         <div className="summary__link-container">
           <CustomLink bullet to="/portfolio">

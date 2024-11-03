@@ -1,41 +1,48 @@
-import * as React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { Divider } from "antd";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import React, { FC } from "react";
+import { Link } from "react-router-dom";
 
-export const AboutMe = () => {
+import "./AboutMe.scss";
 
-    return(
-        <div>
-            <img src="/img/mountain-golf-bg.jpg" alt="" style={{opacity: 0.8, zIndex: -1}} className="position-fixed min-vh-100 min-vw-100" />
-            <div style={{height: 50}} />
-            <div className="pt-3 main container">
-                <p className="display-4">About Me</p>
-                <div className="card" style={{backgroundColor: 'rgba(255, 255, 255, 0.75)'}}>
-                    <div className="card-body">
-                        <ul className="list-group list-group-flush" style={{fontSize: 20}}>
-                            <li className="pb-4 list-group-item" style={{backgroundColor: 'rgba(255, 255, 255, 0)'}}>
-                                Hello! I'm an aspiring full-stack web/software developer with a diverse work history and educational background. A wealth of experience in different
-                                fields has given me a unique skillset. Namely, I can adapt to any working environment and work with a broad spectrum of people whether as 
-                                coworkers or clients. I can also work effectively alone, making decisions with autonomy as necessary.
-                            </li>
-                            <li className="py-4 list-group-item" style={{backgroundColor: 'rgba(255, 255, 255, 0)'}}>
-                                Perhaps most importantly, I've found I have a passion for learning new things. This is one of the biggest reasons I have gravitated towards development
-                                as a career where I can grow my knowledge and skills while keeping up with an ever-changing industry. I also was drawn to development because I have 
-                                had many hobbies and interests related to computers and technology throughout my life including dabbling in HTML as early as middle school.
-                            </li>
-                            <li className="pt-4 list-group-item" style={{backgroundColor: 'rgba(255, 255, 255, 0)'}}>
-                                I'm an avid lifelong golfer and play competitively in amateur and open-style tournaments. I'm a DIYer who enjoys giving everything a shot. 
-                                I also enjoy many different hobbies spending time outdoors such as hiking, biking, and many others.
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="card-footer">
-                        <a href="https://github.com/willxj36"><FontAwesomeIcon icon={faGithub} size='3x' /></a>
-                        <a href="https://www.linkedin.com/in/william-seese-89aa07209/" className="ml-3"><FontAwesomeIcon icon={faLinkedin} size='3x' /></a>
-                    </div>
-                </div>
-            </div>
+export const AboutMe: FC = () => {
+  return (
+    <div className="background background__about-me">
+      <div className="about-me__container">
+        <h1>About Me</h1>
+        <div className="about-me__card">
+          <div className="about-me__body">
+            <p className="">
+              Hello! I'm an experienced full-stack web/software developer with a diverse work history and educational
+              background. A wealth of experience walking many different paths in life has given me a unique skillset and
+              perspective that I'm excited to bring wherever my career takes me next!
+            </p>
+            <Divider />
+            <p className="">
+              I have a passion for learning new things! This is maybe the biggest reason I gravitated towards software
+              development as a career. I can grow my knowledge and skills in an ever-changing industry where there's
+              always more to learn and hopefully I happen to teach those around me something new as well. I've always
+              had a keen interest in computers and technology and feel blessed to be where I am today.
+            </p>
+            <Divider />
+            <p className="">
+              I'm an avid lifelong golfer and have played competitively in amateur and open-style tournaments. I'm a
+              DIYer who enjoys giving everything a shot once. I also enjoy many different outdoor hobbies such as
+              hiking, biking, and more. <Link to="/contact">Drop me a line</Link> and let's get to know each other!
+            </p>
+            <Divider />
+          </div>
+          <div className="about-me__footer">
+            <a href="https://github.com/willxj36">
+              <FontAwesomeIcon icon={faGithub} size="2x" />
+            </a>
+            <a href="https://www.linkedin.com/in/william-seese-89aa07209/" className="">
+              <FontAwesomeIcon icon={faLinkedin} size="2x" />
+            </a>
+          </div>
         </div>
-    )
-
-}
+      </div>
+    </div>
+  );
+};

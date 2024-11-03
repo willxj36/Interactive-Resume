@@ -19,6 +19,15 @@
     background-image: url("/public/img/portfolio-bg.png");
   }
 
+  &__about-me {
+    background-image: url("/public/img/mountain-golf-bg.jpg");
+  }
+
+  &__contact {
+    background-image: url("/public/img/northern-lights.jpg");
+    background-color: #fff8;
+  }
+
   &__home {
     align-items: center;
   }
