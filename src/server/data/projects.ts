@@ -74,7 +74,7 @@ export const PROJECTS: Project[] = [
     name: "Java project",
     chronology: "planned",
     status: "todo",
-    summary: "TBD simple Java project",
+    summary: "Planned simple Java project",
     infoList: ["Plan for a project that will challenge basic skills to help improve exisiting knowledge"],
     techList: ["Java"],
     gitHubLink: null,
