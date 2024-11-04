@@ -16,9 +16,10 @@ export const Home = () => {
           <h4>...but you can call me Will</h4>
           <p>
             Hello! I'm a software engineer with experience building and improving large and complex web-based SaaS
-            applications, but always seeking opportunities to grow my knowledge and branch out! I have a great interest
-            in moving to more backend heavy roles and am currently working on leveling up my knowledge of Java. Click
-            around to learn more or if you've seen enough, <Link to="/contact">let's chat!</Link>
+            applications, but always seeking opportunities to grow my knowledge and branch out! I have interest in
+            moving to more backend heavy roles and am currently working on leveling up my knowledge of Java but love
+            working with frontend in TypeScript/React stacks as well. Click around to learn more or if you've seen
+            enough, <Link to="/contact">let's chat!</Link>
           </p>
         </div>
         <div className="summary__link-container">
