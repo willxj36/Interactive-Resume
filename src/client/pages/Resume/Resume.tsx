@@ -32,6 +32,9 @@ export const Resume = () => {
             <CustomLink disabled={section === "skills"} bullet to={"/resume/skills"}>
               Skills
             </CustomLink>
+            <CustomLink bullet to={"/pdf/resume.pdf"} target="_blank" rel="noreferrer">
+              Printable
+            </CustomLink>
           </nav>
         </div>
       </div>
