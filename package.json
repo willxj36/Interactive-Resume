@@ -8,8 +8,8 @@
   },
   "main": "dist/server.js",
   "scripts": {
-    "build": "pnpm dlx webpack",
-    "watch:build": "pnpm dlx webpack -w",
+    "build": "npx webpack",
+    "watch:build": "npx webpack -w",
     "watch:server": "nodemon dist/server.js",
     "dev": "npm-run-all --parallel watch:*",
     "start": "node dist/server.js"
