@@ -3,7 +3,7 @@
   "version": "2.0.3",
   "description": "",
   "engines": {
-    "node": "23.x"
+    "node": "23.1.x"
   },
   "main": "dist/server.js",
   "scripts": {
