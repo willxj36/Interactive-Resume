@@ -34,7 +34,7 @@
 
   &__section {
     display: flex;
-    flex: 1;
+    flex: 1.5;
     justify-content: center;
   }
 
@@ -94,21 +94,27 @@
     animation: navbar-slide-down 1s ease 0s 1 forwards;
   }
 
-  &__contact-button {
+  &__right-button {
     cursor: pointer;
-    height: 48px;
-    width: 200px;
-    font-size: larger;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     border: none;
+    height: 48px;
     border-radius: 16px;
     background: linear-gradient(transparent, #004488);
-    color: #eee;
-    text-shadow: 2px 3px 4px midnightblue;
     transition: background-color 0.4s linear;
-
     &:hover {
       background-color: #0c0341;
+    }
+
+    &--contact {
+      color: #eee;
+      width: 200px;
+      font-size: larger;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      text-shadow: 2px 3px 4px midnightblue;
+    }
+
+    &--mobile-menu {
+      width: 48px;
     }
   }
 }

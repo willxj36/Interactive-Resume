@@ -24,7 +24,8 @@ const App = () => {
       setIsMobileAlertOpen(true);
       Modal.warning({
         title: "Mobile device detected",
-        content: "This website is best viewed on a tablet or desktop. Optimization for mobile devices coming soon!",
+        content:
+          "Some parts of this website may not work as expected on smaller devices, but updates including full mobile support are in progress!",
         onClose: () => {
           setHasUserDismissedMobileAlert(true);
           setIsMobileAlertOpen(false);
