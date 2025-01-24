@@ -1,10 +1,12 @@
+import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import { CustomLink } from "../CustomLink";
 import { NavMenu } from "./NavMenu";
 
 import "./Navbar.scss";
+import { Popover } from "antd";
 
 export const Navbar = () => {
   const [scrollState, setScrollState] = useState<"start" | "scrolled-up" | "scrolled-down">("start");
@@ -38,6 +40,12 @@ export const Navbar = () => {
                 <div className="navbar__icon-shader" />
                 <img src="/img/favicon_io/favicon-32x32.png" alt="W-icon" />
               </Link>
+              <Popover
+                trigger={["hover", "click"]}
+                content="I'm currently rolling out improvements to the site, but some areas may not work as expected on mobile. Check back soon!"
+              >
+                <FontAwesomeIcon className="navbar__mobile-warning-icon" size="xl" icon={faTriangleExclamation} />
+              </Popover>
             </span>
           </div>
           <NavMenu />

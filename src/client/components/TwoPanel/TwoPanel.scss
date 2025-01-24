@@ -1,0 +1,38 @@
+$backgroundColor: #f8ffffd0;
+
+.content-row {
+  margin: 4px 0px;
+  min-height: 300px;
+}
+
+.content-col {
+  &__container {
+    height: 100%;
+    padding: 20px;
+    background-color: $backgroundColor;
+    box-shadow: 0px 0px 8px 8px $backgroundColor;
+
+    &--text-end {
+      text-align: end;
+    }
+  }
+}
+
+.transparent-col {
+  &__container {
+    box-shadow: $backgroundColor 0px 0px 8px 8px;
+  }
+
+  &__inner {
+    height: 100%;
+    background: $backgroundColor;
+
+    &--left {
+      mask-image: radial-gradient(ellipse at 0, transparent 0, transparent 50%, black 70%);
+    }
+
+    &--right {
+      mask-image: radial-gradient(ellipse at 100%, transparent 0, transparent 50%, black 70%);
+    }
+  }
+}

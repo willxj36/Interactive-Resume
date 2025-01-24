@@ -1,42 +1,48 @@
-import * as React from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 
-import { CustomLink, Hero, TwoPanel } from "../../components";
+import { Hero, TwoPanel } from "../../components";
 
 import "../../scss/app.scss";
 import "./Home.scss";
 
+const panelsContent = [
+  {
+    title: "Proven Technical Expertise",
+    text: [
+      "Expert in TypeScript/JavaScript, React, Node.js/Express.js, HTML/CSS",
+      "Demonstrated results in performance and enterprise-grade scalability",
+      "Deep experience with various SQL and NoSQL databases",
+      "Full stack knowledge of many other frameworks on top of infrastructure and CI/CD experience",
+    ],
+  },
+  {
+    title: "Experienced Leader",
+    text: [
+      "Over a decade of experience with different forms of leadership",
+      "Focus on people management in high-volume foodservice with teams of up to 50+ for special events",
+      "Led smaller crews in more direct settings in contracting and golf course management",
+      "Training/mentorship throughout all positions including new software engineers in rapidly growing startup",
+    ],
+  },
+  {
+    title: "Driven by Growth",
+    text: [
+      "Passion for learning and personal improvement",
+      "Dedicated to driving organizational success through collaboration and business-needs-first strategy",
+      "Excited by learning, using, and creating the latest cutting-edge technology and tools",
+    ],
+  },
+];
+
 export const Home = () => {
   return (
     <div className="background background__home">
-      <div style={{ display: "flex", flexDirection: "column" }}>
+      <main style={{ display: "flex", flexDirection: "column" }}>
         <Hero />
-        <TwoPanel text="hallo" title="title" index={1} />
-        <div className="summary__container">
-          <div className="summary__personal">
-            <h1 className="summary__header">William A. Seese</h1>
-            <h4>...but you can call me Will</h4>
-            <p>
-              Hello! I'm a software engineer with experience building and improving large and complex web-based SaaS
-              applications, but always seeking opportunities to grow my knowledge and branch out! I have interest in
-              moving to more backend heavy roles and am currently working on leveling up my knowledge of Java but love
-              working with frontend in TypeScript/React stacks as well. Click around to learn more or if you've seen
-              enough, <Link to="/contact">let's chat!</Link>
-            </p>
-          </div>
-          <div className="summary__link-container">
-            <CustomLink bullet to="/portfolio">
-              Portfolio
-            </CustomLink>
-            <CustomLink bullet to="/resume">
-              {"R\u00E9sum\u00E9"}
-            </CustomLink>
-            <CustomLink bullet to="/aboutme">
-              About Me
-            </CustomLink>
-          </div>
-        </div>
-      </div>
+        {panelsContent.map((content, index) => (
+          <TwoPanel title={content.title} bulletPoints={content.text} index={index} />
+        ))}
+      </main>
     </div>
   );
 };

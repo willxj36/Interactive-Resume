@@ -23,43 +23,45 @@ export const Portfolio = () => {
 
   return (
     <div className="background background__portfolio">
-      <div className="portfolio__container">
-        <div className="portfolio__header-container">
-          <h1>My Projects</h1>
+      <main className="main-layout">
+        <div className="portfolio__container">
+          <div className="portfolio__header-container">
+            <h1>My Projects</h1>
+          </div>
+          <div className="portfolio__projects-container">
+            <div className="portfolio__banner portfolio__banner--current">
+              <div className="portfolio__projects-section">
+                <h2 className="portfolio__section-header">Current</h2>
+                <div className="portfolio__cards-container">
+                  {currentProjects.map((project) => (
+                    <ProjectInfo key={project.id} project={project} />
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="portfolio__banner portfolio__banner--early">
+              <div className="portfolio__projects-section">
+                <h2 className="portfolio__section-header">Early Career</h2>
+                <div className="portfolio__cards-container">
+                  {earlyProjects.map((project) => (
+                    <ProjectInfo key={project.id} project={project} />
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="portfolio__banner portfolio__banner--planned">
+              <div className="portfolio__projects-section">
+                <h2 className="portfolio__section-header">Future Plans</h2>
+                <div className="portfolio__cards-container">
+                  {plannedProjects.map((project) => (
+                    <ProjectInfo key={project.id} project={project} />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="portfolio__projects-container">
-          <div className="portfolio__banner portfolio__banner--current">
-            <div className="portfolio__projects-section">
-              <h2 className="portfolio__section-header">Current</h2>
-              <div className="portfolio__cards-container">
-                {currentProjects.map((project) => (
-                  <ProjectInfo key={project.id} project={project} />
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className="portfolio__banner portfolio__banner--early">
-            <div className="portfolio__projects-section">
-              <h2 className="portfolio__section-header">Early Career</h2>
-              <div className="portfolio__cards-container">
-                {earlyProjects.map((project) => (
-                  <ProjectInfo key={project.id} project={project} />
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className="portfolio__banner portfolio__banner--planned">
-            <div className="portfolio__projects-section">
-              <h2 className="portfolio__section-header">Future Plans</h2>
-              <div className="portfolio__cards-container">
-                {plannedProjects.map((project) => (
-                  <ProjectInfo key={project.id} project={project} />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </main>
     </div>
   );
 };
