@@ -60,7 +60,7 @@ export const NavMenu = () => {
           <Row style={{ height: "100%", gap: 32, flex: 1 }} justify="center" align="middle">
             {navItems.map((item) => (
               <Col key={item}>
-                <CustomLink to={`/${item.replaceAll(" ", "").toLowerCase()}`} textStyle={linkTextStyles}>
+                <CustomLink to={`/${item.replace(" ", "").toLowerCase()}`} textStyle={linkTextStyles}>
                   {item}
                 </CustomLink>
               </Col>
