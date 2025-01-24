@@ -14,6 +14,9 @@ $backgroundColor: #f8ffffd0;
 
     &--text-end {
       text-align: end;
+      & li {
+        justify-content: end !important;
+      }
     }
   }
 }
