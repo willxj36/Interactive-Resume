@@ -37,7 +37,7 @@ export const NavMenu = () => {
     items: navItems.map((item) => ({
       key: item,
       label: (
-        <CustomLink to={`/${item.replaceAll(" ", "").toLowerCase()}`} textStyle={linkTextStyles}>
+        <CustomLink to={`/${item.replace(" ", "").toLowerCase()}`} textStyle={linkTextStyles}>
           {item}
         </CustomLink>
       ),
