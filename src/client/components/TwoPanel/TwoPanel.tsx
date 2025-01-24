@@ -20,10 +20,12 @@ export const TwoPanel: React.FC<TwoPanelProps> = (props) => {
         md={16}
         flex={1}
       >
-        <Title level={2}>
-          <em>{title}</em>
-        </Title>
-        <List dataSource={bulletPoints} renderItem={(item) => <List.Item>{item}</List.Item>} />
+        <span className="content-col__inner-text">
+          <Title level={2}>
+            <em>{title}</em>
+          </Title>
+          <List dataSource={bulletPoints} renderItem={(item) => <List.Item>{item}</List.Item>} />
+        </span>
       </Col>
       {isEven && <TransparentColumn position="right" />}
     </Row>
