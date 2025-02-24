@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from "react";
+import React, { createContext, useState, useContext, FC } from "react";
 
 const AreAllExpandedContext = createContext<boolean | null>(null);
 
@@ -6,7 +6,7 @@ const SetAreAllExpandedContext = createContext<
   ((s: boolean | ((s: boolean) => boolean)) => void) | null
 >(null);
 
-export const ExpandProvider = ({ children }) => {
+export const ExpandProvider: FC = ({ children }) => {
   const [areAllExpanded, setAreAllExpanded] = useState(false);
 
   return (

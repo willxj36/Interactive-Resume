@@ -82,14 +82,13 @@ export const ResumeCard: FC<ResumeCardProps> = (props) => {
     }
   }, [isExpanded, titleComputedHeight, detailsComputedHeight]);
 
-  // && will return first operand if it's falsy contrary to common misconception that it just means AND
-  let formattedStartDate =
-    entity["startDate"] && dayjs(entity["startDate"]).format("MMM YYYY");
-  let formattedEndDate =
-    entity["endDate"] !== undefined &&
-    (entity["endDate"] === null
+  const formattedStartDate =
+    "startDate" in entity && dayjs(entity.startDate).format("MMM YYYY");
+  const formattedEndDate =
+    "endDate" in entity &&
+    (entity.endDate === null
       ? "present"
-      : dayjs(entity["endDate"]).format("MMM YYYY"));
+      : dayjs(entity.endDate).format("MMM YYYY"));
 
   return (
     <div ref={containerRef} className="resume-card__container">
@@ -105,15 +104,15 @@ export const ResumeCard: FC<ResumeCardProps> = (props) => {
             }`}
           />
         </div>
-        {entity["entitySubTitle"] && (
-          <h4 className="resume-card__subtitle">{entity["entitySubTitle"]}</h4>
+        {"entitySubTitle" in entity && (
+          <h4 className="resume-card__subtitle">{entity.entitySubTitle}</h4>
         )}
         {formattedStartDate && (
           <p>{`${formattedStartDate} to ${formattedEndDate}`}</p>
         )}
       </div>
       <div ref={detailsRef} className="resume-card__details">
-        {entity["detailSummary"] && <span>{entity["detailSummary"]}</span>}
+        {"detailSummary" in entity && <span>{entity.detailSummary}</span>}
         <ul>
           {entity.details.map((res) => (
             // highly arbitrary keys but should guarantee uniqueness for this specific usage
