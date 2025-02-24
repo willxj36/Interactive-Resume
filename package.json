@@ -1,6 +1,6 @@
 {
   "name": "wills-interactive-resume",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "",
   "engines": {
     "node": "23.1.x",

@@ -32,8 +32,8 @@ const ResumeTab: FC<ResumeTabWrapperProps> = (props) => {
 
   return (
     <>
-      <div className="resume-tab__title">
-        <Title level={1}>
+      <div className="resume-tab__title-container">
+        <Title className="resume-tab__title" level={1}>
           <b>
             <em>{tabName}</em>
           </b>

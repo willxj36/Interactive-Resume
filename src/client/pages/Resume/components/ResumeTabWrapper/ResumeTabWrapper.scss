@@ -1,9 +1,14 @@
 .resume-tab {
-  &__title {
+  &__title-container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     margin-right: 10%;
+  }
+
+  &__title {
+    min-width: 200px;
   }
 
   &__expand-all-button {
