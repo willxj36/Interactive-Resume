@@ -9,7 +9,9 @@ import "./Navbar.scss";
 import { Popover } from "antd";
 
 export const Navbar = () => {
-  const [scrollState, setScrollState] = useState<"start" | "scrolled-up" | "scrolled-down">("start");
+  const [scrollState, setScrollState] = useState<
+    "start" | "scrolled-up" | "scrolled-down"
+  >("start");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,12 +42,6 @@ export const Navbar = () => {
                 <div className="navbar__icon-shader" />
                 <img src="/img/favicon_io/favicon-32x32.png" alt="W-icon" />
               </Link>
-              <Popover
-                trigger={["hover", "click"]}
-                content="I'm currently rolling out improvements to the site, but some areas may not work as expected on mobile. Check back soon!"
-              >
-                <FontAwesomeIcon className="navbar__mobile-warning-icon" size="xl" icon={faTriangleExclamation} />
-              </Popover>
             </span>
           </div>
           <NavMenu />
