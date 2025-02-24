@@ -1,35 +1,49 @@
-import { Skill } from "../../utils/models";
+import { ResumeEntitySection, Skill } from "../../utils/models";
 
-export const SKILLS: Skill[] = [
+export const SKILLS: ResumeEntitySection<Skill>[] = [
   {
-    id: 1,
-    entityTitle: "Languages and Frameworks",
-    details: [
+    sectionTitle: "Software Engineering",
+    entities: [
       {
-        description: "Proficient:",
-        extraList: ["JavaScript/Typescript", "HTML/CSS", "React", "Node", "Express", "Firebase", "Git"],
+        id: 1,
+        entityTitle: "Languages and Frameworks",
+        details: [
+          {
+            description: "Proficient:",
+            extraList: ["JavaScript/Typescript", "HTML/CSS", "React", "Node", "Express", "Firebase", "Git"],
+          },
+          { description: "Intermediate:", extraList: ["SQL", "React Native", "Bash"] },
+          { description: "Basics:", extraList: ["Python", "Java", "C#"] },
+        ],
       },
-      { description: "Intermediate:", extraList: ["SQL", "React Native", "Bash"] },
-      { description: "Basics:", extraList: ["Python", "Java"] },
+      {
+        id: 2,
+        entityTitle: "Development Soft Skills",
+        details: [
+          { description: "Debugging in Developer Tools, Node, and external logging tools e.g. Datadog" },
+          { description: "DSA, System Design, SOLID" },
+          { description: "Semantic HTML, accessibility, basic SEO" },
+        ],
+      },
     ],
   },
   {
-    id: 2,
-    entityTitle: "Development Soft Skills",
-    details: [
-      { description: "Debugging in browser and Node" },
-      { description: "Windows troubleshooting" },
-      { description: "Basic web design principles" },
-    ],
-  },
-  {
-    id: 3,
-    entityTitle: "General Skills",
-    details: [
-      { description: "Experience supervising and training both small and large teams" },
-      { description: "Highly driven by growth and advancement both personal and professional" },
-      { description: "Lifelong passion for learning" },
-      { description: "Demonstrated ability to maintain composure and work well under stress" },
+    sectionTitle: "Other Skills",
+    entities: [
+      {
+        id: 3,
+        entityTitle: "General Skills",
+        details: [
+          { description: "Extensive leadership experience supervising and training both small and large teams" },
+          {
+            description: "Demonstrated ability to maintain composure and thrive in fast-paced and dynamic environments",
+          },
+          {
+            description:
+              "Proven communication skills in remote and on-site environments with both technical and non-technical coworkers and customers",
+          },
+        ],
+      },
     ],
   },
 ];

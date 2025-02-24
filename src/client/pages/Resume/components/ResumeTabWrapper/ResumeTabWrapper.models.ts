@@ -1,4 +1,4 @@
-import { ResumeEntity } from "../../../../../utils/models";
+import { ResumeEntity, ResumeEntitySection } from "../../../../../utils/models";
 
 /**
  * props for wrapper that goes around each section of the /resume/* path
@@ -7,6 +7,6 @@ import { ResumeEntity } from "../../../../../utils/models";
  */
 export interface ResumeTabWrapperProps {
   tabName: "Experience" | "Education" | "Skills";
-  entities: ResumeEntity[];
+  sections: ResumeEntitySection<ResumeEntity>[];
   showExpandAll: boolean;
 }

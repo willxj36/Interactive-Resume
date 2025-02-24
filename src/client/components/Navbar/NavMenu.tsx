@@ -57,7 +57,7 @@ export const NavMenu = () => {
         </Dropdown>
       ) : (
         <Row style={{ height: "100%" }}>
-          <Row style={{ height: "100%", gap: 32, flex: 1 }} justify="center" align="middle">
+          <Row style={{ height: "100%", gap: 32, flex: 1, minWidth: 300 }} justify="center" align="middle">
             {navItems.map((item) => (
               <Col key={item}>
                 <CustomLink to={`/${item.replace(" ", "").toLowerCase()}`} textStyle={linkTextStyles}>

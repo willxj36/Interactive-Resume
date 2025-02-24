@@ -26,13 +26,18 @@ interface ResumeEntityOptions {
   detailSummary: string;
 }
 
-export type ResumeEntity = ResumeEntityBase & Partial<ResumeEntityOptions>;
+export type ResumeEntity = Job | School | Skill;
 
-export type Job = Required<ResumeEntity>;
+export interface ResumeEntitySection<ResumeEntity> {
+  sectionTitle: string;
+  entities: ResumeEntity[];
+}
+
+export type Job = ResumeEntityBase & ResumeEntityOptions;
 /**
  * Base Entity but with required startDate and EndDate
  */
-export type School = ResumeEntity & Pick<ResumeEntityOptions, "startDate" | "endDate">;
+export type School = ResumeEntityBase & Pick<ResumeEntityOptions, "startDate" | "endDate">;
 export type Skill = ResumeEntityBase;
 
 /**
