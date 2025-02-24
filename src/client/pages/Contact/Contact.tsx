@@ -14,42 +14,51 @@ export const Contact = () => {
       <main className="main-layout">
         <div className="contact__container">
           <div className="contact__info-container">
-            <div className="contact__info-item">
-              <div className="contact__info-icon">
-                <FontAwesomeIcon icon={faEnvelopeCircleCheck} size="3x" />
+            <a className="contact__link" href="mailto:willxj36@gmail.com">
+              <div className="contact__info-item">
+                <div className="contact__info-icon">
+                  <FontAwesomeIcon icon={faEnvelopeCircleCheck} size="3x" />
+                </div>
+                <strong>
+                  <span className="contact__link--text">Email Me</span>
+                </strong>
               </div>
-              <strong>
-                <a className="contact__link" href="mailto:willxj36@gmail.com">
-                  Email Me
-                </a>
-              </strong>
-            </div>
-            <div className="contact__info-item">
-              <div className="contact__info-icon">
-                <FontAwesomeIcon icon={faGithub} size="3x" />
+            </a>
+            <a
+              className="contact__link"
+              href={GITHUB_BASE_URL}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div className="contact__info-item">
+                <div className="contact__info-icon">
+                  <FontAwesomeIcon icon={faGithub} size="3x" />
+                </div>
+                <strong>
+                  <span className="contact__link--text">
+                    Check out my GitHub
+                  </span>
+                </strong>
               </div>
-              <strong>
-                <a className="contact__link" href={GITHUB_BASE_URL} target="_blank" rel="noreferrer">
-                  Check out my GitHub
-                </a>
-              </strong>
-            </div>
-            <div className="contact__info-item">
-              <div className="contact__info-icon">
-                <FontAwesomeIcon icon={faLinkedin} size="3x" />
+            </a>
+            <a href={LINKED_IN_URL} className="contact__link">
+              <div className="contact__info-item">
+                <div className="contact__info-icon">
+                  <FontAwesomeIcon icon={faLinkedin} size="3x" />
+                </div>
+                <strong>
+                  <span className="contact__link--text">
+                    Catch me on LinkedIn
+                  </span>
+                </strong>
               </div>
-              <strong>
-                <a className="contact__link" href={LINKED_IN_URL}>
-                  Catch me on LinkedIn
-                </a>
-              </strong>
-            </div>
+            </a>
           </div>
           <div className="contact__right-bar">
             <h1 className="contact__text-right">Let's Talk!</h1>
             <p className="contact__text-right contact__invite">
-              Questions? Comments? Networking? Think your company and me are a great fit? Drop me an email and connect
-              with me!
+              Questions? Comments? Networking? Think your company and me are a
+              great fit? Let's connect!
             </p>
           </div>
         </div>

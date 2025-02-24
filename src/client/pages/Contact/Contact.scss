@@ -1,20 +1,21 @@
 .contact {
   &__container {
     display: flex;
+    justify-content: center;
     margin: 225px auto 0 auto;
-    width: 50%;
+    padding: 0px 24px;
+    flex-wrap: wrap;
   }
 
   &__info-container {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 300px;
   }
 
   &__info-item {
     display: flex;
     margin: 12px 0;
-    text-decoration: none;
   }
 
   &__info-icon {
@@ -23,13 +24,20 @@
 
   &__link {
     color: #004488;
-    text-decoration: none !important;
-    line-height: 48px;
-    font-size: 20px;
+    text-decoration: none;
+
+    &--text {
+      line-height: 48px;
+      font-size: 20px;
+    }
 
     &:hover {
       color: black;
     }
+  }
+
+  &__right-bar {
+    width: 300px;
   }
 
   &__text-right {
@@ -37,7 +45,6 @@
   }
 
   &__invite {
-    max-width: 350px;
     font-size: 20px;
   }
 }
