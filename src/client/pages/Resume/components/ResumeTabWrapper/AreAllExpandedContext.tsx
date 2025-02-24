@@ -1,14 +1,11 @@
 import React, { createContext, useState, useContext } from "react";
 
-// Context for the state
 const AreAllExpandedContext = createContext<boolean | null>(null);
 
-// Context for the state updater function
 const SetAreAllExpandedContext = createContext<
   ((s: boolean | ((s: boolean) => boolean)) => void) | null
 >(null);
 
-// Provider component
 export const ExpandProvider = ({ children }) => {
   const [areAllExpanded, setAreAllExpanded] = useState(false);
 
@@ -21,7 +18,6 @@ export const ExpandProvider = ({ children }) => {
   );
 };
 
-// Custom hooks to use the contexts
 export const useAreAllExpanded = () => {
   const context = useContext(AreAllExpandedContext);
   if (context === null) {

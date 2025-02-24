@@ -40,7 +40,12 @@ export const Home = () => {
       <main style={{ display: "flex", flexDirection: "column" }}>
         <Hero />
         {panelsContent.map((content, index) => (
-          <TwoPanel title={content.title} bulletPoints={content.text} index={index} />
+          <TwoPanel
+            key={content.title}
+            title={content.title}
+            bulletPoints={content.text}
+            index={index}
+          />
         ))}
       </main>
     </div>

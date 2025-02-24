@@ -21,5 +21,7 @@ export const Experience: FC = () => {
     })();
   }, []);
 
-  return <ResumeTabWrapper tabName="Experience" sections={jobs} showExpandAll />;
+  return (
+    <ResumeTabWrapper tabName="Experience" sections={jobs} showExpandAll />
+  );
 };

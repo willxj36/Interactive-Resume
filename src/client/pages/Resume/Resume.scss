@@ -4,9 +4,10 @@
     justify-content: space-between;
     align-self: center;
     height: 100%;
-    width: 50vw;
+    max-width: 1140px;
     min-width: 300px;
     margin-top: 125px;
+    padding: 0px 24px;
   }
 
   &__current-section {
@@ -21,5 +22,16 @@
     align-items: end;
     gap: 36px;
     margin-top: 24px;
+  }
+
+  &__drawer-button {
+    position: sticky;
+    margin-right: -24px;
+    top: calc(30vh);
+    font-size: 24;
+    padding: 48px 12px;
+    border-radius: 10px 0px 0px 10px;
+    border-color: #0088aa;
+    color: #0088aa;
   }
 }

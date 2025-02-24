@@ -3,7 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronCircleDown } from "@fortawesome/free-solid-svg-icons";
 import React, { FC } from "react";
 
-import { ExpandProvider, useAreAllExpanded, useSetAreAllExpanded } from "./AreAllExpandedContext";
+import {
+  ExpandProvider,
+  useAreAllExpanded,
+  useSetAreAllExpanded,
+} from "./AreAllExpandedContext";
 import { ResumeCard } from "../ResumeCard";
 import { ResumeTabWrapperProps } from "./ResumeTabWrapper.models";
 import { ResumeEntity, ResumeEntitySection } from "../../../../../utils/models";
@@ -43,7 +47,9 @@ const ResumeTab: FC<ResumeTabWrapperProps> = (props) => {
           >
             {!areAllExpanded ? "Expand All" : "Collapse All"}
             <FontAwesomeIcon
-              className={`resume-tab__expand-all-icon${areAllExpanded ? " resume-tab__expand-all-icon--expanded" : ""}`}
+              className={`resume-tab__expand-all-icon${
+                areAllExpanded ? " resume-tab__expand-all-icon--expanded" : ""
+              }`}
               icon={faChevronCircleDown}
               size="lg"
             />
@@ -51,13 +57,15 @@ const ResumeTab: FC<ResumeTabWrapperProps> = (props) => {
         )}
       </div>
       {sections.map((section) => (
-        <ResumeTabSection section={section} />
+        <ResumeTabSection key={section.sectionTitle} section={section} />
       ))}
     </>
   );
 };
 
-const ResumeTabSection: FC<{ section: ResumeEntitySection<ResumeEntity> }> = ({ section }) => {
+const ResumeTabSection: FC<{ section: ResumeEntitySection<ResumeEntity> }> = ({
+  section,
+}) => {
   return (
     <>
       <Title level={2}>{section.sectionTitle}</Title>

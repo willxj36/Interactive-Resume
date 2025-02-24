@@ -3,21 +3,12 @@ import { Layout, Row, Col, Dropdown, Button } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+
 import { CustomLink } from "../CustomLink";
+import { useIsSmallScreen } from "../../shared/utils/hooks";
 
 export const NavMenu = () => {
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isSmallScreen = useIsSmallScreen();
 
   const navItems = useMemo(() => {
     const items = ["Portfolio", "Resume", "About Me"];
@@ -37,7 +28,10 @@ export const NavMenu = () => {
     items: navItems.map((item) => ({
       key: item,
       label: (
-        <CustomLink to={`/${item.replace(" ", "").toLowerCase()}`} textStyle={linkTextStyles}>
+        <CustomLink
+          to={`/${item.replace(" ", "").toLowerCase()}`}
+          textStyle={linkTextStyles}
+        >
           {item}
         </CustomLink>
       ),
@@ -50,17 +44,27 @@ export const NavMenu = () => {
       {isSmallScreen ? (
         <Dropdown menu={menu} placement="bottomRight">
           <span className="navbar__endcap navbar__endcap--right">
-            <Button type="primary" className="navbar__right-button navbar__right-button--mobile-menu">
+            <Button
+              type="primary"
+              className="navbar__right-button navbar__right-button--mobile-menu"
+            >
               <FontAwesomeIcon size="xl" color="white" icon={faBars} />
             </Button>
           </span>
         </Dropdown>
       ) : (
         <Row style={{ height: "100%" }}>
-          <Row style={{ height: "100%", gap: 32, flex: 1, minWidth: 300 }} justify="center" align="middle">
+          <Row
+            style={{ height: "100%", gap: 32, flex: 1, minWidth: 300 }}
+            justify="center"
+            align="middle"
+          >
             {navItems.map((item) => (
               <Col key={item}>
-                <CustomLink to={`/${item.replace(" ", "").toLowerCase()}`} textStyle={linkTextStyles}>
+                <CustomLink
+                  to={`/${item.replace(" ", "").toLowerCase()}`}
+                  textStyle={linkTextStyles}
+                >
                   {item}
                 </CustomLink>
               </Col>

@@ -1,4 +1,4 @@
-import { useCallback, useRef } from "react";
+import { useCallback, useRef, useState, useEffect } from "react";
 
 /**
  * simple throttle hook that should work anywhere in frontend for any function not requiring a return
@@ -18,4 +18,26 @@ export const useThrottle = (cb: () => void, delayMs: number) => {
       }, delayMs);
     }
   }, [cb, delayMs]);
+};
+
+/**
+ * Detects small screen for conditional responsive logic
+ * @returns boolean; whether screen is less than 768px wide indicating likely a
+ * phone screen
+ */
+export const useIsSmallScreen = (): boolean => {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return isSmallScreen;
 };
